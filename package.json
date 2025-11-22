@@ -1,0 +1,42 @@
+{
+  "name": "firefox-devtools-mcp",
+  "version": "0.1.0",
+  "description": "MCP server for Firefox DevTools - Take JSON snapshots for AI debugging",
+  "type": "module",
+  "main": "./build/index.js",
+  "bin": {
+    "firefox-devtools-mcp": "./build/index.js"
+  },
+  "scripts": {
+    "build": "tsc && chmod 755 build/index.js",
+    "dev": "tsx src/index.ts",
+    "watch": "tsc --watch",
+    "prepare": "npm run build"
+  },
+  "keywords": [
+    "mcp",
+    "firefox",
+    "devtools",
+    "playwright",
+    "snapshot",
+    "accessibility"
+  ],
+  "author": "f2cmb",
+  "license": "MIT",
+  "files": [
+    "build"
+  ],
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.4",
+    "playwright": "^1.50.0",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.6.0",
+    "tsx": "^4.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
